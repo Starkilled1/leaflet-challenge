@@ -74,14 +74,13 @@ d3.json(url).then(data => {
 
 
 
-
+// Declaring where the legend will be
 let legend = L.control({ position: 'bottomright'});
-
+// this section Add the legend adding some html to the index page without being hard coded
 legend.onAdd = function(myMap){
     var div = L.DomUtil.create('div', 'legend');
     var grades = [-10, 10, 30, 50, 70, 90];
     var colors = ['limegreen', 'yellowgreen', 'gold', 'orange', 'orangered', 'red'];
-    var labels = [];
 
     div.innerHTML += '<b>Earthquake Depth (km)</b><br>';
 
